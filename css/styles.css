@@ -64,7 +64,7 @@ img {
 }
 
 .menu-nav a {
-    font-weight: 500;
+    /* font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -72,16 +72,17 @@ img {
     display: inline-block;
     padding-top: 24px;
     padding-bottom: 24px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .menu-nav {
-    display: flex;
+    /* display: none; */
+    /* display: flex;
     gap: 40px;
-    margin-left: 76px;
+    margin-left: 76px; */
 }
 
-.menu-nav a:hover,
+/* .menu-nav a:hover,
 .menu-nav a:focus {
     color: #404bbf;
 }
@@ -102,7 +103,7 @@ img {
     width: 100%;
     height: 4px;
     background: #404bbf;
-}
+} */
 
 ul {
     list-style: none;
@@ -112,41 +113,173 @@ a {
     text-decoration: none;
 }
 
+.mob-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    padding: 72px 16px 40px 16px;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    visibility: hidden;
+}
+
 .contact-info a {
-    font-size: 16px;
+    text-decoration: none;
+    /* font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
     font-style: normal;
-    display: inline-block;
-    padding-top: 24px;
-    padding-bottom: 24px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block; */
 }
 
-.contact-info a:hover,
+/* .contact-info a:hover,
 .contact-info a:focus {
     color: #404bbf;
+} */
+
+/* address {
+    margin-left: auto;
+} */
+
+.menu-nav-tab {
+    display: none;
 }
 
-address {
-    margin-left: auto;
+.contact-info-tab {
+    display: none;
 }
 
 .contact-info {
+    font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+        color: #434455;
+       font-style: normal;
     display: flex;
-    gap: 40px;
+        flex-direction: column;
+        gap: 24px;
+        margin-bottom: 48px;
+        margin-left: 16px;
+        list-style: none;
+        padding: 0;
+    
 }
 
+.menu-open-btn {
+border: none;
+background-color: transparent;
+    cursor: pointer;
+    margin-left: auto;
+}
 
+.menu-nav {
+    font-weight: 700;
+        font-size: 36px;
+        line-height: 1.1;
+        letter-spacing: 0.02em;
+        color: #2e2f42;
+        display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-bottom: 168px;
+            list-style: none;
+            padding: 0;
+            margin-left: 16px;
+}
+
+.menu-nav .nav-link,
+.menu-nav .nav-link-current {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    color: #404bbf;
+    text-decoration: none;
+}
+
+.header-media-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        gap: 40px;
+        list-style: none;
+        padding: 0;
+        margin-bottom: 40px;
+    /* display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        margin-top: 48px; */
+}
+.media-icon-mob-list {
+        /* background-color: #4d5ae5;
+        border-radius: 50%; */
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        width: 40px;
+            height: 40px;
+}
+
+.mob-social-link {
+    width: 100%;
+        height: 100%;
+        background-color: #4d5ae5;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.media-icon-mob {
+    fill: #F4F4FD;
+}
+
+.media-icon-mob-list {
+    /* width: 40px;
+        height: 40px; */
+}
+
+.menu-close-btn {
+    border-radius: 100%;
+        background-color: #e7e9fc;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        box-sizing: border-box;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        cursor: pointer;
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 h1 {
-    font-size: 56px;
+font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #fff;
+    max-width: 216px;
+    margin-bottom: 72px;
+
+    /* font-size: 56px;
     line-height: 1.07;
     letter-spacing: 0.02em;
     color: #fff;
     max-width: 496px;
-    margin-bottom: 48px;
+    margin-bottom: 48px; */
 
 
 
@@ -154,15 +287,23 @@ h1 {
 
 .hero-section {
     background-color: #2E2F42;
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/people-office.jpg);
-    max-width: 1440px;
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)), url(../images/bg-mob.jpg);
+    /* background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+        url(../images/people-office.jpg); */
+    /* max-width: 1440px; */
+    min-width: 320px;
     margin: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     padding: 188px 0;
-
+    /* padding: 188px 0; */
+ 
+    @media screen and (min-resolution: 2x) {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                    rgba(46, 47, 66, 0.7)), url(../images/bg-mob-2x.jpg);
+    }
 }
 
 .hero-img {
@@ -650,6 +791,7 @@ footer {
     
 }
 
+
 input::placeholder {
     font-weight: 400;
     font-size: 12px;
@@ -657,6 +799,45 @@ input::placeholder {
     letter-spacing: 0.04em;
     color: #fff;
 
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    z-index: 999;
+
+    /* Приховуємо меню спочатку */
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Клас, який будемо додавати через JS */
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.mobile-menu-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 72px 16px 40px 16px;
+}
+
+.menu-close-btn {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    /* стилі як у модалки */
 }
 
 .overlay {
@@ -716,7 +897,7 @@ input::placeholder {
 
 .modal-icon-close {
     fill: #2e2f42;
-    ;
+    
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -918,6 +1099,81 @@ textarea::placeholder {
 }
 
 @media screen and (min-width: 768px) {
+    .header-logo {
+            margin-right: 120px;
+        }
+    .menu-open-btn {
+        display: none;
+    }
+    .menu-nav-tab .nav-link-tab-current {
+            position: relative;
+            color: #404bbf;
+        }
+
+        .nav-link-tab-current {
+            padding: 24px 0;
+        }
+    
+    .header-wrapper {
+        padding: 16px;
+    }
+    
+        .nav-link-tab-current::after {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            border-radius: 2px;
+            width: 100%;
+            height: 4px;
+            background: #404bbf;
+        }
+    
+    
+.contact-info-tab {
+    display: block;
+}
+
+.contact-info-tab a {
+    display: flex;
+        flex-direction: column;
+        /* Ставимо один під одним */
+        gap: 12px;
+        /* Відступ між поштою та телефоном */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-right: 16px;
+        font-weight: 400;
+        font-size: 12px;
+            line-height: 1.6;
+            letter-spacing: 0.04em;
+            color: #434455;
+            font-style: normal;
+            /* display: inline-block; */
+            /* padding-top: 24px;
+            padding-bottom: 24px; */
+            transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-icon {
+    display: none;
+}
+
+.menu-nav-tab {
+    display: flex;
+    gap: 40px;
+    margin-left: 0px;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    max-width: 496px;
+    margin-bottom: 48px;
+}
+
     .features-list {
     flex-direction: row;
     flex-wrap: wrap;
@@ -964,28 +1220,30 @@ max-width: 736px;
 }
 
 .footer-info {
+
+
     display: flex;
     flex-wrap: wrap;
-    /* Дозволяємо перенос елементів */
+    
     flex-direction: row;
     text-align: left;
     align-items: baseline;
-    /* Вирівнюємо лого і соціалку по тексту */
+    
     column-gap: 24px;
-    /* Відступ між лого та соціалкою */
+    
     row-gap: 72px;
-    /* Відступ між верхнім рядом і формою */
+    
     padding-left: 108px;
-    /* Відступ зліва згідно з макетом (опціонально) */
+    
 }
 
-/* Блок з логотипом */
+
 .style-logo {
+   
     display: block;
-        /* Прибираємо мобільний flex-column, якщо він був */
+        
         max-width: 264px;
-    margin-right: 0;
-    /* Скидаємо десктопний margin */
+    
 }
 
 
@@ -997,6 +1255,8 @@ max-width: 736px;
     margin-left: 0;
     /* Скасовуємо десктопне притискання вправо */
 }
+
+
 
 .subscribe-form-fields {
     flex-direction: row;
@@ -1032,6 +1292,64 @@ max-width: 736px;
 }
 
 @media screen and (min-width: 1440px) {
+    .header-wrapper {
+            padding: 0;
+        }
+.menu-nav a:hover,
+    .menu-nav a:focus {
+        color: #404bbf;
+    }
+
+    .menu-nav .nav-link-current {
+        position: relative;
+        color: #404bbf;
+    }
+
+
+
+    .nav-link-current::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        border-radius: 2px;
+        width: 100%;
+        height: 4px;
+        background: #404bbf;
+    }
+
+
+.contact-info-tab a {
+        font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    font-style: normal;
+    display: inline-block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+        .contact-info-tab {
+
+            display: flex;
+            flex-direction: row;
+                gap: 40px;
+                margin-left: auto;
+        
+        }
+
+        .contact-info-tab a:hover,
+        .contact-info-tab a:focus {
+            color: #404bbf;
+        }
+     
+        .hero-section { 
+                    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+                url(../images/people-office.jpg);
+        }
+
     .features-list li {
             width: calc((100% - 72px) / 4);
             
@@ -1131,7 +1449,7 @@ align-items: center;
  }
 
  /* 2. Блок з логотипом (повертаємо відступ справа) */
- .footer-logo-container {
+ .style-logo {
      margin-right: 120px;
      display: block;
      /* Скасовуємо мобільний flex-center */
