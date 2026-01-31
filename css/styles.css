@@ -21,7 +21,8 @@ ul {
 }
 
 .container {
-    max-width: 1158px;
+    width: 100%;
+    max-width: 320px;
     margin: 0 auto;
     padding-left: 15px;
     padding-right: 15px;
@@ -212,16 +213,18 @@ font-weight: 700;
     background-color: #2E2F42;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)), url(../images/bg-mob.jpg);
-    min-width: 320px;
+    max-width: 320px;
     margin: auto;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    padding: 188px 0;
+    padding: 72px 0;
  
-    @media screen and (min-resolution: 2x) {
-        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
-                    rgba(46, 47, 66, 0.7)), url(../images/bg-mob-2x.jpg);
+}
+@media screen and (min-resolution: 2x) {
+    .hero-section {background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)),
+    url(../images/bg-mob-2x.jpg);
     }
 }
 
@@ -299,7 +302,7 @@ font-weight: 700;
 }
 
 .features-list li {
-    width: 264px;
+    width: 100%;
     
 }
 
@@ -435,12 +438,16 @@ display: flex;
 
 .portfolio-card {
     background-color: #fff;
-    width: 288px;
+    width: 100%;
     margin-bottom: 48px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
+.our-portfolio-list {
+    display: flex;
+        flex-direction: column;
+        row-gap: 48px;
+}
 
 
 .section-portfolio-subtitle {
@@ -982,6 +989,9 @@ textarea::placeholder {
 }
 
 @media screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
     .header-logo {
             margin-right: 120px;
         }
@@ -1017,20 +1027,23 @@ textarea::placeholder {
     display: block;
 }
 
-.contact-info-tab a {
+.contact-info-tab {
     display: flex;
         flex-direction: column;
         gap: 12px;
-        list-style: none;
         padding: 0;
         margin: 0;
         margin-right: 16px;
+        
+}
+      .contact-info-tab a {
         font-weight: 400;
         font-size: 12px;
             line-height: 1.6;
             letter-spacing: 0.04em;
             color: #434455;
             font-style: normal;
+            list-style: none;
             transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -1047,7 +1060,8 @@ textarea::placeholder {
 .hero-section {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/bg-tab1.jpg);
-        
+        padding: 112px 0;
+            max-width: 768px;
 }
 
 h1 {
@@ -1082,16 +1096,14 @@ h1 {
 
 }
 .portfolio-card {
-    width: 356px;
+    width: calc((100% - 24px) / 2);
     
 }
 .our-portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    column-gap: 24px;
-    row-gap: 48px;
+    flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 24px;
+        row-gap: 72px;
 max-width: 736px;
 }
 
@@ -1155,9 +1167,19 @@ max-width: 736px;
 
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1158px) {
+    .container {
+        max-width: 1158px;
+    }
     .header-wrapper {
             padding: 0;
+        }
+
+    .hero-section {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+   rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
+    max-width: 1440px;
+    padding: 188px 0;
         }
 .menu-nav-tab a:hover,
     .menu-nav a:focus {
@@ -1252,21 +1274,17 @@ max-width: 736px;
 
                 }
 
-                .team-social-link:hover,
-                .team-social-link:focus {
-                    background-color: #404bbf;
+        .team-social-link:hover,
+        .team-social-link:focus {
+        background-color: #404bbf;
                 }
-             .portfolio-card {
-                    width: calc((100% - 48px) / 3);
+        .portfolio-card {
+        width: calc((100% - 48px) / 3);
                 }
-             .our-portfolio-list {
-                                    display: flex;
-                    flex-wrap: wrap;
-                    align-items: center;
-                    justify-content: center;
-                    column-gap: 24px;
-                    row-gap: 48px;
-                    max-width: 1128px;
+        .our-portfolio-list {
+            column-gap: 24px;
+            row-gap: 48px;
+            max-width: 1128px;
                 
                                 }
          .portfolio-card:hover {
@@ -1370,14 +1388,16 @@ max-width: 736px;
   .hero-section {
      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
            url(../images/bg-tab-2x.jpg);
+
                     }
                 }
 
-@media screen and (min-width: 1440px) and (min-resolution: 192dpi),
-screen and (min-width: 1440px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1158px) and (min-resolution: 192dpi),
+screen and (min-width: 1158px) and (min-resolution: 2dppx) {
     .hero-section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
             url(../images/bg-desk-2x.jpg);
+            
     }
 }
 
