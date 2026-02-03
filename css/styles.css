@@ -390,11 +390,11 @@ margin-left: auto;
 }
 
 .section-footer-subtitle {
-    font-weight: 700;
-        font-size: 18px;
-        line-height: 1.16;
-        letter-spacing: 0.03em;
-        color: #f4f4fd;
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #fff;
         
 }
 
@@ -558,9 +558,9 @@ input::placeholder {
     display: flex;
     flex-direction: column;
     z-index: 10;
-    padding: 72px 16px 16px;
     visibility: hidden;
     opacity: 0;
+    pointer-events: none;
 }
 
 .mob-menu.is-open {
@@ -1058,7 +1058,7 @@ h1 {
     flex-wrap: wrap;
     align-items: flex-start;
     text-align: start;
-    gap: 96px 24px;
+    gap: 72px 24px;
     
 
 }
@@ -1376,7 +1376,7 @@ max-width: 736px;
         }
 
  @media screen and (min-width: 768px) and (min-resolution: 192dpi),
-screen and (min-width: 768px) and(min-resolution: 2dppx) {
+screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .hero-section {
      background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
            url(../images/bg-tab-2x.jpg);
