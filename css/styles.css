@@ -302,6 +302,7 @@ font-weight: 700;
 
 .portfolio-container {
     padding-top: 96px;
+    padding-bottom: 96px;
 display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -560,7 +561,7 @@ input::placeholder {
     z-index: 10;
     visibility: hidden;
     opacity: 0;
-    pointer-events: none;
+
 }
 
 .mob-menu.is-open {
@@ -581,6 +582,7 @@ opacity: 1;
     display: flex;
     flex-direction: column;
     gap: 24px;
+    margin-top: auto;
     margin-bottom: 48px;
     margin-left: 16px;
     list-style: none;
@@ -613,6 +615,10 @@ font-weight: 500;
     margin-left: auto;
 }
 
+.mob-nav {
+    flex-grow: 1;
+}
+
 .menu-nav {
     font-weight: 700;
     font-size: 36px;
@@ -622,10 +628,10 @@ font-weight: 500;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    margin-bottom: 168px;
     list-style: none;
     padding: 0;
     margin-left: 16px;
+    margin-bottom: 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -663,10 +669,16 @@ font-weight: 500;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .media-icon-mob {
     fill: #F4F4FD;
+}
+
+.mob-social-link:hover,
+.mob-social-link:focus {
+    background-color: #404bbf;
 }
 
 
@@ -856,7 +868,7 @@ textarea::placeholder {
 .modal-label-checked {
     font-weight: 400;
     font-size: 12px;
-    line-height: 1.6;
+    line-height: 1.33;
     letter-spacing: 0.04em;
     color: #8e8f99;
     display: flex;
@@ -1224,6 +1236,11 @@ max-width: 736px;
         color: #404bbf;
     }
 
+    .nav-link {
+        padding-top: 24px;
+            padding-bottom: 24px;
+    }
+
     .nav-link-tab-current {
     padding-top: 24px;
         padding-bottom: 24px;
@@ -1270,7 +1287,9 @@ max-width: 736px;
         margin-bottom: 48px;
     }
 
-
+  .features-container {
+    padding: 120px 0;
+  }
     .features-list li {
             width: calc((100% - 72px) / 4);
             
@@ -1294,6 +1313,9 @@ max-width: 736px;
         border-radius: 4px;
         margin-bottom: 8px;
     }
+    .section-team-container {
+        padding: 120px 0;
+    }
         .section-team-card-background {
             width: calc((100% - (3 * 24px)) / 4);
     
@@ -1310,6 +1332,7 @@ max-width: 736px;
 
         .portfolio-container {
             padding-top: 120px;
+            padding-bottom: 120px;
         }
 
         .portfolio-card {
